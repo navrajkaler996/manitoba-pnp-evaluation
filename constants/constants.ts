@@ -5,4 +5,19 @@ export const windowHeight = Dimensions.get("window").height;
 
 export const COLORS = {
   "text-gray": "#808080",
+  "primary-1": "#2F80ED",
+};
+
+//CSS
+
+export const STYLES = {
+  SHADOW_1: {
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.3,
+    shadowRadius: 3,
+
+    // Elevation for Android
+    elevation: 5,
+  },
 };

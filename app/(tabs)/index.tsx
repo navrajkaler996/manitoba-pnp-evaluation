@@ -1,4 +1,5 @@
-import { COLORS, windowWidth } from "@/constants/constants";
+import Button from "@/components/button";
+import { COLORS, windowHeight, windowWidth } from "@/constants/constants";
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 
 export default function HomeScreen() {
@@ -20,6 +21,9 @@ export default function HomeScreen() {
             Take a free evaluation {"\n"}to know what are your chances!
           </Text>
         </View>
+        <View style={styles.buttonContainer}>
+          <Button text={"Get started"} />
+        </View>
       </View>
     </ScrollView>
   );
@@ -28,17 +32,22 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   scrollContainer: {
     flexGrow: 1,
-    //justifyContent: "center",
+    justifyContent: "center",
     alignItems: "center",
-    paddingVertical: 20,
+    height: windowHeight,
+    // paddingVertical: 20,
   },
   innerContainer: {
     alignItems: "center",
+    justifyContent: "center",
+    flex: 1,
+    marginTop: -100,
   },
   welcomeImage: {
     width: windowWidth * 0.6,
+    height: 300,
     resizeMode: "contain",
-    marginBottom: 20,
+    marginBottom: 40,
   },
   aboutContainer: {
     alignItems: "center",
@@ -57,7 +66,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     letterSpacing: 0.2,
     color: COLORS["text-gray"],
-    alignSelf: "left",
+    textAlign: "center",
     marginTop: 30,
+  },
+  buttonContainer: {
+    position: "absolute",
+    bottom: 70,
   },
 });
