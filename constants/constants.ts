@@ -6,6 +6,7 @@ export const windowHeight = Dimensions.get("window").height;
 export const COLORS = {
   "text-gray": "#808080",
   "primary-1": "#2F80ED",
+  "primary-light": "#aed9ff",
 };
 
 //CSS

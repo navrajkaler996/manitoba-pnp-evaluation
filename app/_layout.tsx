@@ -15,6 +15,7 @@ export default function RootLayout() {
   const [loaded] = useFonts({
     nunitoRegular: require("../assets/fonts/Nunito/static/Nunito-Regular.ttf"),
     nunitoSemiBold: require("../assets/fonts/Nunito/static/Nunito-SemiBold.ttf"),
+    nunitoBold: require("../assets/fonts/Nunito/static/Nunito-Bold.ttf"),
   });
 
   if (!loaded) {
@@ -26,6 +27,10 @@ export default function RootLayout() {
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
       <Stack>
         <Stack.Screen name="(tabs)/index" options={{ headerShown: false }} />
+        <Stack.Screen
+          name="(tabs)/getStarted"
+          options={{ headerShown: false }}
+        />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />

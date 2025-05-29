@@ -1,8 +1,16 @@
 import Button from "@/components/button";
 import { COLORS, windowHeight, windowWidth } from "@/constants/constants";
+import { useRouter } from "expo-router";
 import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
 
 export default function HomeScreen() {
+  const router = useRouter();
+
+  const handleGetStarted = () => {
+    router.push({
+      pathname: "/(tabs)/getStarted",
+    });
+  };
   return (
     <ScrollView contentContainerStyle={styles.scrollContainer}>
       <View style={styles.innerContainer}>
@@ -22,7 +30,7 @@ export default function HomeScreen() {
           </Text>
         </View>
         <View style={styles.buttonContainer}>
-          <Button text={"Get started"} />
+          <Button text={"Get started"} onPress={handleGetStarted} />
         </View>
       </View>
     </ScrollView>
